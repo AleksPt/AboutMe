@@ -1,8 +1,8 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-
-    private let logIn = "1"
+    
+    private let userName = "1"
     private let password = "1"
     
     @IBOutlet weak var userNameTextField: UITextField!
@@ -11,24 +11,32 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let welcomeVC = segue.destination as? WelcomeViewController
+        welcomeVC?.userName = userName
+    }
+    
     @IBAction func logInAction() {
-        if userNameTextField.text == logIn, passwordTextField.text == password {
-            
-        } else {
+        guard userNameTextField.text == userName, passwordTextField.text == password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password"
             )
+            return
         }
     }
     
     @IBAction func forgotUserNameAction() {
-        showAlert(title: "Oops!", message: "Your name is \(logIn)")
+        showAlert(title: "Oops!", message: "Your name is \(userName)")
     }
     
     @IBAction func forgotPasswordAction() {
         showAlert(title: "Oops!", message: "Your password is \(password)")
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        
     }
 }
 
