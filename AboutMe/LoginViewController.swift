@@ -7,7 +7,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     // MARK: - Private Properties
-    private let user = "1"
+    private let user = "User"
     private let password = "1"
     
     // MARK: - Navigation
