@@ -1,45 +1,49 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-    
-    private let userName = "1"
-    private let password = "1"
-    
+
+    // MARK: - IB Outlets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    // MARK: - Private Properties
+    private let user = "1"
+    private let password = "1"
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeVC = segue.destination as? WelcomeViewController
-        welcomeVC?.userName = userName
+        welcomeVC?.userName = user
     }
     
-    @IBAction func logInAction() {
-        guard userNameTextField.text == userName, passwordTextField.text == password else {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard userNameTextField.text == user, passwordTextField.text == password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password"
             )
-            return
+            return false
         }
+        
+        return true
     }
     
-    @IBAction func forgotUserNameAction() {
-        showAlert(title: "Oops!", message: "Your name is \(userName)")
+    // MARK: - IB Actions
+    @IBAction private func forgotUserNameAction() {
+        showAlert(title: "Oops!", message: "Your name is \(user)")
     }
     
-    @IBAction func forgotPasswordAction() {
+    @IBAction private func forgotPasswordAction() {
         showAlert(title: "Oops!", message: "Your password is \(password)")
     }
     
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
-        
+    @IBAction private func unwind(for segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
     }
 }
 
+// MARK: - Hide the keyboard
 extension LoginViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -47,6 +51,7 @@ extension LoginViewController {
     }
 }
 
+// MARK: - Show alert
 extension LoginViewController {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(

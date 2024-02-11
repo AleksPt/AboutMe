@@ -10,6 +10,4 @@ final class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(userName ?? "")"
     }
-    
-    
 }

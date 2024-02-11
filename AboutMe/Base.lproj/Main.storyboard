@@ -34,7 +34,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                         <connections>
-                                            <action selector="logInAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="z8l-nZ-sYl"/>
                                             <segue destination="WLn-DG-9Mj" kind="show" id="ZyA-Ki-Jzj"/>
                                         </connections>
                                     </button>
