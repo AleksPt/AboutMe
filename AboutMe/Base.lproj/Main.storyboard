@@ -33,6 +33,9 @@
                                         <rect key="frame" x="0.0" y="108" width="311" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log In"/>
+                                        <connections>
+                                            <action selector="logInAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="z8l-nZ-sYl"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="2eM-2Q-0f6">
                                         <rect key="frame" x="0.0" y="162.5" width="311" height="31"/>
@@ -43,6 +46,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="forgotUserNameAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="uDq-Qt-tF9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM8-qZ-52U">
                                                 <rect key="frame" x="171.5" y="0.0" width="139.5" height="31"/>
@@ -50,6 +56,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="forgotPasswordAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Sy-3M-Iy7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -64,6 +73,10 @@
                             <constraint firstItem="f93-IR-30r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="kxF-TP-zj7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="j0A-Xk-5ft" id="CuW-7N-67g"/>
+                        <outlet property="userNameTextField" destination="bvS-t1-vdc" id="E81-A4-mOh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
