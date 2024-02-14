@@ -107,11 +107,19 @@
 				FA7858F62B7D02050063C33A /* ViewControllers */,
 				FA7858F72B7D021C0063C33A /* Models */,
 				FA7858F82B7D022F0063C33A /* Storyboards */,
+				FAB7CEFE2B7D5F8D002F54F8 /* Extensions */,
 				FA7858F92B7D02430063C33A /* App */,
 				FA856D022B78E1F100E5A971 /* Assets.xcassets */,
-				FAB7CEFC2B7D5D17002F54F8 /* UIView + Extensions.swift */,
 			);
 			path = AboutMe;
+			sourceTree = "<group>";
+		};
+		FAB7CEFE2B7D5F8D002F54F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAB7CEFC2B7D5D17002F54F8 /* UIView + Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

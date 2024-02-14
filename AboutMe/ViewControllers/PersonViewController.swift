@@ -2,6 +2,7 @@ import UIKit
 
 final class PersonViewController: UIViewController {
 
+    // MARK: - IB Outlets
     @IBOutlet weak var avatarImageView: UIImageView!
     
     @IBOutlet weak var firstNameLabel: UILabel!
@@ -10,8 +11,10 @@ final class PersonViewController: UIViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var contactLabel: UILabel!
     
+    // MARK: - Private Properties
     var user: User!
     
+    // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         title = user.person.firstName + " " + user.person.lastName
@@ -29,6 +32,7 @@ final class PersonViewController: UIViewController {
         view.addGradient()
     }
     
+    // MARK: - Overrides Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let bioVC = segue.destination as? BioViewController {
             bioVC.user = user

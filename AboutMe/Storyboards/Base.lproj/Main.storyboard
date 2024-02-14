@@ -136,11 +136,11 @@
             </objects>
             <point key="canvasLocation" x="598" y="806"/>
         </scene>
-        <!--Alex Petrenko-->
+        <!--Алексей Петренко-->
         <scene sceneID="YbV-dm-cil">
             <objects>
                 <navigationController id="6Aa-w0-9mT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Alex Petrenko" image="person.fill" catalog="system" id="6O5-3C-i8N"/>
+                    <tabBarItem key="tabBarItem" title="Алексей Петренко" image="person.fill" catalog="system" id="6O5-3C-i8N"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BCQ-Ec-nkd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -274,7 +274,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HbY-V5-7IY">
-                        <barButtonItem key="backBarButtonItem" title="Alex Petrenko" id="nLA-rZ-cu0"/>
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="Fn5-re-kSr">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -338,7 +337,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="21x-dG-O5X">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="WLn-DG-9Mj" kind="relationship" relationship="viewControllers" id="nRF-VK-xME"/>

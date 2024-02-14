@@ -14,13 +14,12 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         userNameTextField.text = user.userName
         passwordTextField.text = user.password
-        view.addGradient()
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tabBarVC = segue.destination as? UITabBarController {
-            
+    
             tabBarVC.viewControllers?.forEach { viewController in
                 if let welcomeVC = viewController as? WelcomeViewController {
                     welcomeVC.user = user
