@@ -7,17 +7,23 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     // MARK: - Private Properties
-    private let user = "User"
-    private let password = "1"
+    private let user = User.getUser()
+    
+    // MARK: - View Life Cycles
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameTextField.text = user.userName
+        passwordTextField.text = user.password
+    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeVC = segue.destination as? WelcomeViewController
-        welcomeVC?.userName = user
+        welcomeVC?.userName = user.userName
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTextField.text == user, passwordTextField.text == password else {
+        guard userNameTextField.text == user.userName, passwordTextField.text == user.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password"
@@ -34,7 +40,7 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction private func forgotPasswordAction() {
-        showAlert(title: "Oops!", message: "Your password is \(password)")
+        showAlert(title: "Oops!", message: "Your password is \(user.password)")
     }
     
     @IBAction private func unwind(for segue: UIStoryboardSegue) {
