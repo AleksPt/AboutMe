@@ -138,7 +138,7 @@
         <scene sceneID="YbV-dm-cil">
             <objects>
                 <navigationController id="6Aa-w0-9mT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Alex Petrenko" id="6O5-3C-i8N"/>
+                    <tabBarItem key="tabBarItem" title="Alex Petrenko" image="person.fill" catalog="system" id="6O5-3C-i8N"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="BCQ-Ec-nkd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>

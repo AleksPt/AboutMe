@@ -1,14 +1,14 @@
 import UIKit
 
-final class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UITabBarController {
 
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    var userName: String!
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome, \(userName ?? "")\nMy name is "
+        welcomeLabel.text = "Welcome, \(user.userName)\nMy name is \(user.person.firstName) \(user.person.lastName)"
         
     }
 }
