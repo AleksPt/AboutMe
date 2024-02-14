@@ -91,13 +91,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkG-r0-xql">
-                                <rect key="frame" x="147.5" y="160" width="80" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <rect key="frame" x="154.5" y="160" width="66.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsU-Pc-cfM">
-                                <rect key="frame" x="168.5" y="251" width="38" height="41"/>
+                                <rect key="frame" x="168.5" y="243.5" width="38" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -118,7 +118,9 @@
                             <constraint firstItem="DkG-r0-xql" firstAttribute="centerX" secondItem="qUj-SE-4Ss" secondAttribute="centerX" id="5ZW-ey-qw3"/>
                             <constraint firstItem="BsU-Pc-cfM" firstAttribute="centerX" secondItem="qUj-SE-4Ss" secondAttribute="centerX" id="8Tb-G2-hHP"/>
                             <constraint firstItem="qyK-K7-w91" firstAttribute="centerX" secondItem="qUj-SE-4Ss" secondAttribute="centerX" id="BLl-F7-spT"/>
+                            <constraint firstItem="cRn-Jl-eNH" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DkG-r0-xql" secondAttribute="trailing" id="RVt-FM-GBw"/>
                             <constraint firstItem="cRn-Jl-eNH" firstAttribute="bottom" secondItem="qyK-K7-w91" secondAttribute="bottom" constant="100" id="XMp-Ps-2Ks"/>
+                            <constraint firstItem="DkG-r0-xql" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cRn-Jl-eNH" secondAttribute="leading" id="hBo-Cr-3JY"/>
                             <constraint firstItem="BsU-Pc-cfM" firstAttribute="top" secondItem="DkG-r0-xql" secondAttribute="bottom" constant="50" id="mbf-Eb-ol9"/>
                             <constraint firstItem="DkG-r0-xql" firstAttribute="top" secondItem="cRn-Jl-eNH" secondAttribute="top" constant="160" id="zSE-Xh-g9R"/>
                         </constraints>
