@@ -8,6 +8,7 @@ final class BioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addGradient()
         self.navigationController?.navigationBar.tintColor = UIColor.white
         bioLabel.text = user.person.bio
     }

@@ -14,6 +14,7 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         userNameTextField.text = user.userName
         passwordTextField.text = user.password
+        view.addGradient()
     }
     
     // MARK: - Navigation
@@ -32,11 +33,14 @@ final class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTextField.text == user.userName, passwordTextField.text == user.password else {
+        guard userNameTextField.text == user.userName, 
+                passwordTextField.text == user.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password"
-            )
+            ) {
+                self.passwordTextField.text = ""
+            }
             return false
         }
         
@@ -44,12 +48,10 @@ final class LoginViewController: UIViewController {
     }
     
     // MARK: - IB Actions
-    @IBAction private func forgotUserNameAction() {
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0 ?
         showAlert(title: "Oops!", message: "Your name is \(user.userName)")
-    }
-    
-    @IBAction private func forgotPasswordAction() {
-        showAlert(title: "Oops!", message: "Your password is \(user.password)")
+        : showAlert(title: "Oops!", message: "Your password is \(user.password)")
     }
     
     @IBAction private func unwind(for segue: UIStoryboardSegue) {
@@ -68,7 +70,7 @@ extension LoginViewController {
 
 // MARK: - Show alert
 extension LoginViewController {
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(
             title: title,
             message: message,
@@ -78,7 +80,7 @@ extension LoginViewController {
         let okAction = UIAlertAction(
             title: "OK",
             style: .default) { _ in
-                self.passwordTextField.text = ""
+                completion?()
             }
         
         alert.addAction(okAction)

@@ -8,6 +8,7 @@ final class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addGradient()
         welcomeLabel.text = "Welcome, \(user.userName)!\nMy name is \(user.person.firstName) \(user.person.lastName)"
     }
 }

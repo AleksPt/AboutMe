@@ -8,6 +8,7 @@ final class PersonViewController: UIViewController {
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var contactLabel: UILabel!
     
     var user: User!
     
@@ -15,14 +16,17 @@ final class PersonViewController: UIViewController {
         super.viewDidLoad()
         title = user.person.firstName + " " + user.person.lastName
         
-        avatarImageView.image = .avatar
+        avatarImageView.image = UIImage(named: user.person.photo)
         avatarImageView.layer.cornerRadius = 75
         avatarImageView.clipsToBounds = true
         
         firstNameLabel.text = user.person.firstName
         lastNameLabel.text = user.person.lastName
-        ageLabel.text = "\(user.person.age)"
-        cityLabel.text = user.person.city
+        ageLabel.text = "\(user.person.studyPeriod) месяцев"
+        cityLabel.text = user.person.cityOfResidence
+        contactLabel.text = user.person.telegram
+        
+        view.addGradient()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

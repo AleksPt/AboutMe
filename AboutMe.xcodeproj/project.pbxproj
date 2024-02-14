@@ -17,6 +17,7 @@
 		FA856D062B78E1F100E5A971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA856D042B78E1F100E5A971 /* LaunchScreen.storyboard */; };
 		FA856D0E2B78E3E900E5A971 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA856D0D2B78E3E900E5A971 /* WelcomeViewController.swift */; };
 		FAB7CEF92B7D0BF7002F54F8 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7CEF82B7D0BF7002F54F8 /* BioViewController.swift */; };
+		FAB7CEFD2B7D5D17002F54F8 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7CEFC2B7D5D17002F54F8 /* UIView + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FA856D072B78E1F100E5A971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA856D0D2B78E3E900E5A971 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FAB7CEF82B7D0BF7002F54F8 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		FAB7CEFC2B7D5D17002F54F8 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				FA7858F82B7D022F0063C33A /* Storyboards */,
 				FA7858F92B7D02430063C33A /* App */,
 				FA856D022B78E1F100E5A971 /* Assets.xcassets */,
+				FAB7CEFC2B7D5D17002F54F8 /* UIView + Extensions.swift */,
 			);
 			path = AboutMe;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB7CEFD2B7D5D17002F54F8 /* UIView + Extensions.swift in Sources */,
 				FAB7CEF92B7D0BF7002F54F8 /* BioViewController.swift in Sources */,
 				FA856CFE2B78E1F000E5A971 /* LoginViewController.swift in Sources */,
 				FA7871D12B7D059D00ECEAEA /* PersonViewController.swift in Sources */,
