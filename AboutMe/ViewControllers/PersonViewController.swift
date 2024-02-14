@@ -13,7 +13,7 @@ final class PersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = user.person.firstName + "" + user.person.lastName
+        title = user.person.firstName + " " + user.person.lastName
         
         avatarImageView.image = .avatar
         avatarImageView.layer.cornerRadius = 75
@@ -23,5 +23,11 @@ final class PersonViewController: UIViewController {
         lastNameLabel.text = user.person.lastName
         ageLabel.text = "\(user.person.age)"
         cityLabel.text = user.person.city
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let bioVC = segue.destination as? BioViewController {
+            bioVC.user = user
+        }
     }
 }

@@ -26,11 +26,6 @@ final class LoginViewController: UIViewController {
                 } else if let navigationVC = viewController as? UINavigationController {
                     let personVC = navigationVC.topViewController as? PersonViewController
                     personVC?.user = user
-                    
-                    let bioVC = navigationVC.topViewController as? BioViewController
-                    bioVC?.user = user
-                } else if let bioVC = viewController as? BioViewController {
-                    bioVC.user = user
                 }
             }
         }
@@ -50,7 +45,7 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction private func forgotUserNameAction() {
-        showAlert(title: "Oops!", message: "Your name is \(user)")
+        showAlert(title: "Oops!", message: "Your name is \(user.userName)")
     }
     
     @IBAction private func forgotPasswordAction() {
